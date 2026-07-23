@@ -63,10 +63,6 @@ new Overleaf project. It compiles as-is with the `article` class.
 `\IEEEauthorblock…` author block, and set `\bibliographystyle{IEEEtran}`
 (all available on Overleaf).
 
-## Suggested target venues
-IEEE/ACM International Workshop on Quantum Software Engineering (Q-SE @ ICSE);
-IEEE International Conference on Quantum Software (QSW); IEEE COMPSAC;
-IEEE Access (as an extended article).
 
 ## Notes & honest limitations
 Experiments are simulator-based (Qiskit Aer, depolarizing noise) on
