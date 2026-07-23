@@ -49,20 +49,6 @@ deterministic. Key results:
 | RQ3 Security | planted-violation detection precision = recall = **1.0** |
 | RQ3 Audit | **100%** (8/8) tamper detection on the provenance chain |
 
-## Build the paper
-```bash
-cd paper
-pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
-```
-
-### Overleaf
-Upload `AspectQ_paper_overleaf.zip` (main.tex + references.bib + figures/) as a
-new Overleaf project. It compiles as-is with the `article` class.
-**To use the IEEE conference template for submission:** change the first line of
-`main.tex` to `\documentclass[conference]{IEEEtran}`, uncomment the
-`\IEEEauthorblock…` author block, and set `\bibliographystyle{IEEEtran}`
-(all available on Overleaf).
-
 
 ## Notes & honest limitations
 Experiments are simulator-based (Qiskit Aer, depolarizing noise) on
