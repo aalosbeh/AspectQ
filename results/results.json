@@ -1,0 +1,234 @@
+{
+  "seed": 20260723,
+  "rq1_modularity": {
+    "per_concern": {
+      "ErrorMitigation": {
+        "baseline": {
+          "concern": "ErrorMitigation",
+          "files": 1,
+          "operations": 1,
+          "fragments": 2,
+          "locc": 18,
+          "change_locality": 2
+        },
+        "aspectq": {
+          "concern": "ErrorMitigation",
+          "files": 1,
+          "operations": 1,
+          "fragments": 1,
+          "locc": 61,
+          "change_locality": 1
+        }
+      },
+      "Observability": {
+        "baseline": {
+          "concern": "Observability",
+          "files": 1,
+          "operations": 1,
+          "fragments": 9,
+          "locc": 14,
+          "change_locality": 9
+        },
+        "aspectq": {
+          "concern": "Observability",
+          "files": 1,
+          "operations": 1,
+          "fragments": 1,
+          "locc": 42,
+          "change_locality": 1
+        }
+      },
+      "SecurityPolicy": {
+        "baseline": {
+          "concern": "SecurityPolicy",
+          "files": 1,
+          "operations": 1,
+          "fragments": 3,
+          "locc": 7,
+          "change_locality": 3
+        },
+        "aspectq": {
+          "concern": "SecurityPolicy",
+          "files": 1,
+          "operations": 1,
+          "fragments": 1,
+          "locc": 48,
+          "change_locality": 1
+        }
+      },
+      "ComplianceAudit": {
+        "baseline": {
+          "concern": "ComplianceAudit",
+          "files": 1,
+          "operations": 1,
+          "fragments": 1,
+          "locc": 8,
+          "change_locality": 1
+        },
+        "aspectq": {
+          "concern": "ComplianceAudit",
+          "files": 1,
+          "operations": 1,
+          "fragments": 1,
+          "locc": 52,
+          "change_locality": 1
+        }
+      }
+    },
+    "totals": {
+      "baseline": {
+        "CDC": 4,
+        "CDO": 4,
+        "CDLOC": 15,
+        "LOCC": 47,
+        "CL": 15
+      },
+      "aspectq": {
+        "CDC": 4,
+        "CDO": 4,
+        "CDLOC": 4,
+        "LOCC": 203,
+        "CL": 4
+      }
+    },
+    "functional_equivalence": {
+      "violation_count_match": true,
+      "violation_count": 8,
+      "twoq_match": true,
+      "mitigated_abs_diff": 0.0
+    }
+  },
+  "rq2_overhead": {
+    "sizes": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "weave_ms": [
+      0.22087500110501423,
+      0.45470899931387976,
+      0.6962499992368976,
+      0.9145410003839061,
+      1.130625001678709,
+      1.3734999993175734
+    ],
+    "depths": [
+      10,
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "ops": [
+      15,
+      35,
+      55,
+      75,
+      95,
+      115
+    ],
+    "probe_overhead": {
+      "base_depth": 18,
+      "woven_depth": 26,
+      "base_ops": 55,
+      "barriers_added": 18,
+      "two_qubit_gates_added": 0
+    },
+    "zne_overhead": {
+      "scale_factors": 3,
+      "sampling_multiplier": 3
+    }
+  },
+  "rq3a_error_mitigation": {
+    "depths": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ideal": [
+      -0.4538200569630515,
+      0.23134957910533172,
+      0.20000726498930904,
+      -0.5088665864713545,
+      -0.5543178387756491,
+      -0.145038473684174
+    ],
+    "unmitigated": [
+      -0.397216796875,
+      0.194091796875,
+      0.1690673828125,
+      -0.34521484375,
+      -0.318115234375,
+      -0.0726318359375
+    ],
+    "mitigated": [
+      -0.43132671739119877,
+      0.2246125504670059,
+      0.21992023404334451,
+      -0.5220792650331061,
+      -0.5425264628223758,
+      -0.2317743596226213
+    ],
+    "err_unmitigated": [
+      0.0566032600880515,
+      0.037257782230331715,
+      0.03093988217680904,
+      0.16365174272135452,
+      0.2362026044006491,
+      0.072406637746674
+    ],
+    "err_mitigated": [
+      0.022493339571852733,
+      0.006737028638325815,
+      0.019912969054035473,
+      0.013212678561751567,
+      0.011791375953273286,
+      0.0867358859384473
+    ],
+    "pct_reduction": [
+      60.2614062567027,
+      81.91779479337562,
+      35.63980321501929,
+      91.92634411217456,
+      95.00793990684681,
+      -19.789964895078317
+    ],
+    "mean_pct_reduction": 57.49388723150678
+  },
+  "rq3b_security": {
+    "n_circuits": 20,
+    "planted_violations": 8,
+    "tp": 8,
+    "fp": 0,
+    "tn": 12,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "rq3c_observability": {
+    "reported_two_qubit_gates": 25,
+    "ground_truth_two_qubit_gates": 25,
+    "match": true,
+    "num_layers": 18,
+    "gate_histogram": {
+      "ry": 30,
+      "cx": 25
+    },
+    "weave_time_ms": 0.4055419994983822
+  },
+  "rq3d_compliance": {
+    "chain_length": 8,
+    "clean_verify_ok": true,
+    "tamper_trials": 8,
+    "tamper_detected": 8,
+    "detection_rate": 1.0
+  },
+  "wall_time_s": 0.8135866259999602
+}
