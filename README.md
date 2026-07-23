@@ -28,11 +28,6 @@ AspectQ/
 │   └── run_all.py           # regenerates every number + figure in the paper
 ├── results/results.json     # machine-readable results
 ├── figures/                 # generated figures (.pdf + .png)
-├── paper/
-│   ├── main.tex             # the paper (compiles as-is; Overleaf-ready)
-│   ├── references.bib
-│   ├── figures/             # figures used by the paper
-│   └── main.pdf             # compiled paper (6 pages)
 ├── requirements.txt
 └── README.md
 ```
