@@ -1,0 +1,8 @@
+[logical]  4 qubits, 10 layers, 9 two-qubit gates, audit 26e83419aec88268...
+[level 1]  logical q0 -> physical q0 (readout error 0.167); 2q gates 9; 15 policy violation(s)
+           - 'rz' touches restricted qubit(s) [0] at op 0
+           - 'sx' touches restricted qubit(s) [0] at op 1
+           - 'rz' touches restricted qubit(s) [0] at op 2
+[level 2]  logical q0 -> physical q99 (readout error 0.010); 2q gates 9; 0 policy violation(s)
+[run] ZNE                    unmitigated +0.6797  mitigated +0.6914 +/- 0.0075  (ideal +0.7061)
+[run] ZNE > readout > quota  unmitigated +0.6949  mitigated +0.7069 +/- 0.0073  (ideal +0.7061); quota metered 5 executions / 81920 shots

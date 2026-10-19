@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+figures/*.svg
+results/results_quick.json
+results/.chrome-profile/

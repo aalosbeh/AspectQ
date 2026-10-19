@@ -1,4 +1,11 @@
-qiskit>=1.0
-qiskit-aer>=0.14
-numpy>=1.24
-matplotlib>=3.7
+# Tested with Python 3.13.15, Qiskit 2.6.0, Qiskit Aer 0.17.2,
+# qiskit-ibm-runtime 0.50.0, NumPy 2.5.4, SciPy, Matplotlib (macOS, Apple M4 Max).
+qiskit>=2.0,<3
+qiskit-aer>=0.17
+qiskit-ibm-runtime>=0.40   # calibration snapshots (FakeTorino) for the device model
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+pytest>=8
+rich>=13                   # terminal captures for the paper's appendix
+pymupdf>=1.24              # optional: renders paper pages for checking

@@ -1,0 +1,36 @@
+RQ1  modularity: metrics + three-design equivalence
+RQ2  behaviour preservation + composition
+RQ3  overhead
+RQ4a error mitigation under three noise models
+     D1 done (240 instances)
+     D2 done (240 instances)
+     noise sweep done (120 instances)
+     local folding done (90 instances)
+     DEV level 2 done (120 instances)
+     DEV level 1 done (60 instances)
+RQ4b security policy: mutation suite + physical-layer check
+RQ4d tamper-evident audit
+
+========================================================================
+ AspectQ evaluation summary   (seed 20260723, quick=False)
+ Python 3.13.15 | Qiskit 2.6.0 | Aer 0.17.2 | NumPy 2.5.4
+========================================================================
+ RQ1  design       CL  FRAG  CDLOC  LOCC  driver-concern-LOC  tangling
+      tangled      11    11     22    72                  67      0.93
+      procedural    5    10     19    80                   5      0.50
+      aspectq       5    10     19   240                  10      0.53
+      exact equivalence on 5 programs: max|dE| = 1.1e-15; artifacts identical: True
+ RQ2  unitary 2400/2400  DAG 4800/4800  folding 900/900  depth-neutral probes 600/600
+      naive probe placement depth +0.7% (max +25%);  stages identical: 15/15
+      quota inside ZNE meters 3 executions, outside meters 1; readout MAE zne=0.0316 zne>ro=0.0075 ro>zne=0.0316
+ RQ3  weave cost 7.81 us/op (R^2=1.000); weave/transpile median 0.87; AspectQPass in level-1 pipeline x4.95 (range 2.06-9.72); runtime chain 0.3 us/aspect
+ RQ4a local 2q folding MAE 0.0072 vs global 0.0073 (unmitigated 0.0215) at 62% of the executed operations, n=90
+ RQ4a D1      MAE 0.0245 -> 0.0073 (70.0% lower [65.8, 73.9], 84% improved, A12=0.83, p=3.2e-31, n=240)
+ RQ4a D2      MAE 0.0820 -> 0.0168 (79.5% lower [76.0, 82.7], 88% improved, A12=0.88, p=1.1e-33, n=240)
+ RQ4a DEV_L2  MAE 0.0174 -> 0.0054 (68.8% lower [63.0, 73.7], 83% improved, A12=0.86, p=7.1e-17, n=120) (ZNE alone 50.1%, policy flagged 0%)
+ RQ4a DEV_L1  MAE 0.1703 -> 0.0076 (95.5% lower [94.2, 96.6], 100% improved, A12=0.99, p=8.1e-12, n=60) (ZNE alone 5.3%, policy flagged 100%)
+ RQ4b clean:200/200, forbidden_gate:200/200, restricted_gate:200/200, restricted_measure:200/200, depth_cap:200/200, width_cap:200/200; single-class mutants 1000/1000
+      compiled jobs touching a restricted qubit: level 1 60/60, level 2 14/60, level 3 45/60
+ RQ4d modify:100%/100%/100%, delete:100%/100%/100%, insert:100%/100%/100%, reorder:100%/100%/100%, truncate:0%/100%/0%, rewrite:0%/100%/100%  (chain/anchor/HMAC)
+ wall time 924.5 s
+========================================================================

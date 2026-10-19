@@ -1,0 +1,6 @@
+Mitiq 1.1.0 | Qiskit 2.6.0 | Python 3.12.15
+40 instances (HEA, 4 qubits, depths 1-8), exact noisy channel
+  exponential  max |AspectQ - Mitiq| = 3.03e-03   agree to 1e-8: 39/40
+  richardson   max |AspectQ - Mitiq| = 2.35e-10   agree to 1e-8: 40/40
+  linear       max |AspectQ - Mitiq| = 2.35e-10   agree to 1e-8: 40/40
+  exponential, excluding sign-change fallbacks: 39 instances, max |diff| = 2.35e-10
